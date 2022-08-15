@@ -26,9 +26,7 @@ describe('vacation test', function () {
         }catch(ex){
             console.log(ex.statusText)
             expect(ex.response.status).to.be.equal(200);
-
         }
-     
     });
 
 

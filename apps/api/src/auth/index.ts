@@ -24,6 +24,8 @@ function logoutHandler(req: Request, res: Response) {
   res.status(200).json({ message: "user logged out" });
 }
 
+
+
 async function loginHandler(req: Request, res: Response) {
   try{
     if (!req.body.userName || !req.body.password) return res.status(400).send("missing parameters");
@@ -42,6 +44,7 @@ async function loginHandler(req: Request, res: Response) {
       user_name,
       id,
     });
+
     return res.json({ user_name, message: `success`, token });
   }catch(ex){
     res.json({ message: "something went wrong, please contact liad" });
@@ -49,7 +52,8 @@ async function loginHandler(req: Request, res: Response) {
 }
 
 async function registerHandler(req: Request, res: Response) {
-  const currentUser = await isUserExist(req.body.user_name);
+  try{
+    const currentUser = await isUserExist(req.body.user_name);
   if (currentUser){
      return res.status(404).send("User name already exist");
   }
@@ -62,6 +66,9 @@ async function registerHandler(req: Request, res: Response) {
     id
   });
   res.json({  message: `success` , token });
+  }catch(ex){
+    res.json({ message: "something went wrong, please contact liad" });
+  }
 }
 
 async function verifyCheckHandler(req , res){
