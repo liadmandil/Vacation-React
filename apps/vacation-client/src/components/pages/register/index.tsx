@@ -19,10 +19,10 @@ export function RegisterPage() {
 
 
   function userNameF(n: string){
-    const error = "user name need to be at list 5 ch"
+    const error = "user name need to be at list 6 ch"
     console.log(user.errors)
     dispatch(setUserName(n))
-    if (n.length < 5){
+    if (n.length < 6){
       if(user.errors.filter((err)=> err === error).length === 0){
         dispatch(addError(error))
         console.log("user.errors")
@@ -89,7 +89,7 @@ export function RegisterPage() {
   }
 
 
-  if (typeof token === "string") return <Navigate to="/vacations" />;
+  if (typeof token === "string" && token.length >= 3 ) return <Navigate to="/vacations" />;
   return (
    <WithLoading isLoading={loading}>
        <div>
@@ -99,7 +99,7 @@ export function RegisterPage() {
               <input type="text" placeholder="user Name" onChange={(e)=>{
                 userNameF(e.target.value)
                 }} 
-                className={ user.userName.length < 5 && user.userName.length > 0 ? css.errorInput : ""}
+                className={ user.userName.length < 6 && user.userName.length > 0 ? css.errorInput : ""}
               />
           </div>
           <div>

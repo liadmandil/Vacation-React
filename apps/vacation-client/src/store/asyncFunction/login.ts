@@ -30,9 +30,6 @@ export  async function logOutAsync() {
     store.dispatch(setLoader(true))
     console.log("inside logout action")
     const result = await getLogout();
-    if (result.message !== "success"){
-      updateModal(result.message, "logout")
-    }
     console.log("after logout servise " + result)
     const OldToken = getTokenLS()
     clearTokenLS(OldToken as string);

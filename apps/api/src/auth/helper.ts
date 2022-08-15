@@ -13,7 +13,7 @@ export function signToken(obj: {
         role: obj.id===Number(1)? "admin" : "viewer" 
       },
     },
-    process.env.SECRET ,
+    process.env.SECRET || "secretsecretVacation315096073",
     { expiresIn: "10h" }
   );
 

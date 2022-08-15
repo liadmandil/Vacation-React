@@ -16,7 +16,7 @@ export default async function getRegistretionAction(user: INewUserClient ) {
     console.log("after registretion servise " + result.token)
     store.dispatch(setToken(result.token));
   } catch (error) {
-    updateModal("something went wrong, please contact liad", "registration")
+    updateModal("something went wrong", "registration")
   } finally{
     store.dispatch(setLoader(false))
   }
