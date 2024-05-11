@@ -1,0 +1,389 @@
+.bg{
+    height: 100%;
+    width: 100%;
+    background-image: url("../../../upload/background.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+    box-sizing:border-box;
+    background-attachment:fixed;
+    z-index: -1;   
+}
+
+.errorInput {
+  border: red solid 2px;
+}
+h1 {
+  text-align: center;
+}
+html { 
+    background: url("../../../upload/background.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: none;
+    overflow-x:hidden;
+  }
+
+  body > .bg  {
+    
+    margin: 0;
+    height: 100% !important;
+}
+
+.header{
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    position: relative;
+    top: 0px;
+    z-index: 4;
+}
+
+.vacationPage{
+    display: block;
+    width: 100%;
+    height: 70% !important;
+    margin-top: 12% !important;
+    margin-left: 5% !important;
+    padding-right: 0%;
+}
+
+.logo{
+    position: absolute;
+    top: 0px;
+    left: 22px;
+    /* z-index: 1; */
+    height: 300%;
+    max-height: 100px;
+    min-height: 80px;
+    width: 10rem;
+    max-width: 200px;
+    min-width: 90px;
+    ;
+  background-image: url("../../../upload/logoNew.png");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center center;
+  
+}
+
+.userlogo{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+    /* display: inline; */
+    height: 90px;
+    width: 100px;
+  background-image: url("../../../upload/user-logo.png");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center center;
+}
+
+.links {
+  width: 100%;
+  position: relative;
+  padding-right: 20px
+}
+
+.link {
+  display: inline;
+  vertical-align: top;
+  width: 80px;
+  height: 34px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-size: 0.8rem;
+  margin: 10px;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.link span {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+.link::after {
+  width: 0%;
+  height: 2px;
+  display: block;
+  background-color: #fff;
+  content: " ";
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  -webkit-transition: left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.link:hover::after {
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: #fff;
+  content: " ";
+  position: absolute;
+  top: 34px;
+  left: 0;
+}
+
+.card{
+    height: 250px !important;
+    width: 12rem;
+    margin: 0 30px;
+    border: "none" ;
+    background-size: 100% !important;
+}
+
+
+.cardBody{
+  height: 100%;
+  width: 100%;
+  font-weight :bold;
+}
+
+.cardText{
+    height: 30%;
+    scroll-behavior:inherit;
+    overflow-y:scroll;
+    padding-top: 15px;
+    font-weight :bold;
+}
+
+.cardText::-webkit-scrollbar {
+    display: none;
+}
+
+.cardText {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+.sideVacation{
+    display: inline !important;
+    width: 100%;
+    max-width: 600px !important;
+    height: 100%;
+    min-height: 270px;
+    max-height: 500px;
+    background-image: url("../../../upload/vacations-script.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center ;
+
+}
+
+.vacations{
+    display: flex !important;
+    overflow-x: scroll;
+    height: 320px !important;
+}
+
+.vacations::-webkit-scrollbar {
+  width: 10px;
+}
+
+.vacations::-webkit-scrollbar-track {
+  background-color: none;
+}
+
+.vacations::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+
+.registerform{
+  height: 400px;
+  width: 400px;
+  background-color: rgba(255,255,255,0.15);
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+}
+
+
+
+.loginform{
+  height: 300px;
+  width: 400px;
+  background-color: rgba(255,255,255,0.15);
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+}
+
+.chart{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 30%;
+  left: 50%;
+  width: 25%;
+  min-width: 300px;
+  height: 20%;
+  max-height:400px;
+}
+
+form *{
+  font-family: 'Poppins',sans-serif;
+  color:black;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+
+
+form  input{
+  display: block;
+  height: 2rem;
+  width: 80%;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-left: 10%;
+  margin-bottom: 0px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+form  button{
+  width: 50%;
+  height: 20%;
+  margin-left: 25%;
+  background-color: #ffffff;
+  color: #080710;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+
+.settingsform{
+  height: 380px;
+  width: 400px;
+  background-color: rgba(255,255,255,0.15);
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 58%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+}
+
+
+.loader {
+  color: #FFF;
+  position: fixed; /* or absolute */
+  top: 55%;
+  left: 65%;
+  margin-top: -50px;
+  margin-left: -100px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  letter-spacing: 4px;
+  box-sizing: border-box;
+}
+.loader::before {
+  content: '';  
+  position: absolute;
+  right: 70px;
+  bottom: 20px;
+  height: 25px;
+  width: 5px;
+  background: currentColor;
+  box-sizing: border-box;
+}
+.loader::after {
+  content: '';  
+  width: 4px;
+  height: 4px;
+  background: currentColor;
+  position: absolute;
+  right: 70px;
+  top: 8px;
+  box-sizing: border-box;
+  animation: animloader 0.6s ease-out infinite alternate;
+}
+
+@keyframes animloader {
+  0% {
+    top: 8px;
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    top: 0px;
+    transform: rotate(180deg) scale(1.5);
+  }
+}
+
+
+.likeToggle{
+  text-align: center;
+}
+
+button{
+  background: none;
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
